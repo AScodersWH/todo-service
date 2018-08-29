@@ -49,14 +49,14 @@ public class TodoService {
     }
 
 
-    public boolean verifyToken(String token){
-        Claims body = Jwts.parser().setSigningKey("kitty".getBytes())
-                .parseClaimsJws(token)
-                .getBody();
-        int id = (int) body.get("name");
-        String username = (String) body.get("name");
-        return verify(id);
-
-    }
+//    public boolean verifyToken(String token){
+//        Claims body = Jwts.parser().setSigningKey("kitty".getBytes())
+//                .parseClaimsJws(token)
+//                .getBody();
+//        int id = (int) body.get("name");
+//        String username = (String) body.get("name");
+//        return verify(id);
+//
+//    }
 
 }

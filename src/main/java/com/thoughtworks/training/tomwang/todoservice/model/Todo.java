@@ -15,12 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "todo_list")
-@SQLDelete(sql = "UPDATE todo_list SET deleted = true WHERE id = ?")
-@Where(clause = "deleted = false")
 public class Todo {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String text;
    private boolean visible;

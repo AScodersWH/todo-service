@@ -42,6 +42,6 @@ public class ToDoAuthFilter extends OncePerRequestFilter {
                 .getBody();
         String username = (String) body.get("name");
         String password = (String) body.get("password");
-        return false;
+        return true;
     }
 }
